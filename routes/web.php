@@ -18,3 +18,15 @@ Route::get('/', function () {
 Route::get('1', function () {return 'je suis a la page acceuil !';});
 Route::get('2', function () {return 'je suis a la page developpement !';});
 Route::get('3', function () {return 'je suis a la page resume !';});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
