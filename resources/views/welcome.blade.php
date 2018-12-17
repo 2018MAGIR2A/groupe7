@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>SCHOOL-INFO</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -13,10 +13,13 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #81BEF7;
+                background-image: url("img/home-bg.jpg");
+                background-size: cover;
+                /*color: #636b6f;*/
+                color: #0101DF;
                 font-family: 'Raleway', sans-serif;
-                font-weight: 100;
+                font-weight: bold;
                 height: 100vh;
                 margin: 0;
             }
@@ -50,10 +53,10 @@
             }
 
             .links > a {
-                color: #636b6f;
+                color: #000000;
                 padding: 0 25px;
                 font-size: 12px;
-                font-weight: 600;
+                font-weight: bold;
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
@@ -61,15 +64,17 @@
 
             .m-b-md {
                 margin-bottom: 30px;
-            }
+            } 
         </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
+    </head>   
+    <body>             
+         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
+                    
                         <a href="{{ url('/home') }}">Home</a>
+
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
@@ -79,7 +84,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Bienvenue dans SCHOOLINFO
                 </div>
 
                 <div class="links">
